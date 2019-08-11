@@ -24,7 +24,14 @@ sponge {
     }
 }
 
+test {
+    useJUnitPlatform()
+}
+
 dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.1'
+
     compile 'org.spongepowered:spongeapi:7.1.0'
     compile 'com.google.guava:guava:28.0-jre'
 }
