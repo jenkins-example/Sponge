@@ -2,6 +2,8 @@
   <dictionary name="ClassPC">
     <words>
       <w>gradlew</w>
+      <w>spongeapi</w>
+      <w>spongepowered</w>
     </words>
   </dictionary>
 </component>

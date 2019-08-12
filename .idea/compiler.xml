@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="Sponge_Template.main" target="1.8" />
-      <module name="Sponge_Template.test" target="1.8" />
+      <module name="Jenkins_Sponge.main" target="1.8" />
+      <module name="Jenkins_Sponge.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
