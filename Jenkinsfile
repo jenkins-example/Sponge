@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'openjdk:8u222-jre-stretch'
+            args '--name jenkins-Jenkins_Sponge'
+        }
+    }
     stages {
         stage('Pre-Build') {
             steps {
