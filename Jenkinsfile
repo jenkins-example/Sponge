@@ -4,7 +4,7 @@ pipeline {
     agent {
         docker {
             image 'openjdk:8u222-jdk-stretch'
-            args '--name jenkins-${PROJECT_NAME}'
+            args "--name jenkins-${PROJECT_NAME}"
         }
     }
     stages {
