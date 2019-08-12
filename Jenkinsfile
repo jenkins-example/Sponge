@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'openjdk:8u222-jre-stretch'
+            image 'openjdk:8u222-jdk-stretch'
             args '--name jenkins-Jenkins_Sponge'
         }
     }
