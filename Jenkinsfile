@@ -1,10 +1,11 @@
-def PROJECT_NAME = 'Jenkins_Sponge' // Be aware that PROJECT_NAME cannot contain space, which is not a valid docker container name
+def gradleProps = readProperties file: 'gradle.properties'
+def CONTAINER_NAME = gradleProps.pluginId // Be aware that CONTAINER_NAME cannot contain space, which is not a valid docker container name
 
 pipeline {
     agent {
         docker {
             image 'openjdk:8u222-jdk-stretch'
-            args "--name jenkins-${PROJECT_NAME}"
+            args "--name jenkins-${CONTAINER_NAME}"
         }
     }
     stages {
