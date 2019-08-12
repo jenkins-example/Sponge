@@ -26,11 +26,9 @@ pipeline {
     }
     post {
         success {
-            sh 'pwd'
-            sh 'ls build/libs/'
             archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
         }
-        always {
+        cleanup {
             deleteDir()
         }
     }
