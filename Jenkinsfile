@@ -1,8 +1,10 @@
+def PROJECT_NAME = 'Jenkins_Sponge' // Be aware that PROJECT_NAME cannot contain space, which is not a valid docker container name
+
 pipeline {
     agent {
         docker {
             image 'openjdk:8u222-jdk-stretch'
-            args '--name jenkins-Jenkins_Sponge'
+            args '--name jenkins-${PROJECT_NAME}'
         }
     }
     stages {
@@ -24,6 +26,7 @@ pipeline {
     }
     post {
         success {
+            sh 'ls build/libs/'
             archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
         }
     }
