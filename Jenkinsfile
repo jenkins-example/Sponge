@@ -1,5 +1,4 @@
-def gradleProps = readProperties file: 'gradle.properties'
-def CONTAINER_NAME = gradleProps.pluginId // Be aware that CONTAINER_NAME cannot contain space, which is not a valid docker container name
+def CONTAINER_NAME = "Sponge-Template" // Be aware that CONTAINER_NAME cannot contain space, which is not a valid docker container name
 
 pipeline {
     agent {
